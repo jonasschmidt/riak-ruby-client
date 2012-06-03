@@ -56,6 +56,7 @@ module Riak
     end
 
     def_delegators :content, :content_type, :content_type=,
+              :content_encoding, :content_encoding=,
               :links, :links=,
               :etag, :etag=,
               :last_modified, :last_modified=,

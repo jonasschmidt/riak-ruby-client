@@ -2,6 +2,7 @@ require 'set'
 require 'time'
 require 'yaml'
 require 'forwardable'
+require 'active_support/gzip'
 require 'riak/util/translation'
 require 'riak/serializers'
 
@@ -16,6 +17,9 @@ module Riak
 
     # @return [String] the MIME content type of the value
     attr_accessor :content_type
+
+    # @return [String] the content encoding of the object, e.g. "gzip"
+    attr_accessor :content_encoding
 
     # @return [Set<Link>] a Set of {Riak::Link} objects for relationships between this object and other resources
     attr_accessor :links
